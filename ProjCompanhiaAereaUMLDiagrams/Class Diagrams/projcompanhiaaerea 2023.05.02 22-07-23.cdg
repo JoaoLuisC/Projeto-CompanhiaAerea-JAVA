@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="projcompanhiaaerea">
+  <ClassDiagramComponents>
+    <Class name="Aeronave" package="projcompanhiaaerea" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="nomeAviao" type="String" visibility="private"/>
+        <Field name="qtdAssento" type="int" visibility="private"/>
+        <Field name="autonomia" type="double" visibility="private"/>
+        <Field name="qtdAeronaves" type="int" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="Piloto" name="piloto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNomePiloto" returnType="String" visibility="public"/>
+        <Method name="setNomePiloto" returnType="void" visibility="public">
+          <Argument type="String" name="nomePiloto"/>
+        </Method>
+        <Method name="getQtdAeronaves" returnType="int" visibility="public" isStatic="true"/>
+        <Method name="getCodAeronave" returnType="int" visibility="public"/>
+        <Method name="setCodAeronave" returnType="void" visibility="public">
+          <Argument type="int" name="codAeronave"/>
+        </Method>
+        <Method name="getNomeAviao" returnType="String" visibility="public"/>
+        <Method name="setNomeAviao" returnType="void" visibility="public">
+          <Argument type="String" name="nomeAviao"/>
+        </Method>
+        <Method name="getQtdAssento" returnType="int" visibility="public"/>
+        <Method name="setQtdAssento" returnType="void" visibility="public">
+          <Argument type="int" name="qtdAssento"/>
+        </Method>
+        <Method name="getAutonomia" returnType="double" visibility="public"/>
+        <Method name="setAutonomia" returnType="void" visibility="public">
+          <Argument type="double" name="autonomia"/>
+        </Method>
+        <Method name="getCapacidadeCarga" returnType="double" visibility="public"/>
+        <Method name="setCapacidadeCarga" returnType="void" visibility="public">
+          <Argument type="double" name="capacidadeCarga"/>
+        </Method>
+        <Method name="mostraAeronave" returnType="void" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="Aeroporto" package="projcompanhiaaerea" visibility="public" xPosition="533.0" yPosition="547.0">
+      <Fields>
+        <Field name="nomeAeroporto" type="String" visibility="private"/>
+        <Field name="codAeroporto" type="int" visibility="private"/>
+        <Field name="qtdAeroportos" type="int" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+      </Constructors>
+      <Methods>
+        <Method name="getQtdAeroportos" returnType="int" visibility="public" isStatic="true"/>
+        <Method name="getNomeAeroporto" returnType="String" visibility="public"/>
+        <Method name="setNomeAeroporto" returnType="void" visibility="public">
+          <Argument type="String" name="nomeAeroporto"/>
+        </Method>
+        <Method name="getCodAeroporto" returnType="int" visibility="public"/>
+        <Method name="setCodAeroporto" returnType="void" visibility="public">
+          <Argument type="int" name="codAeroporto"/>
+        </Method>
+        <Method name="mostraAeroporto" returnType="void" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="CoPiloto" package="projcompanhiaaerea" visibility="public" xPosition="871.0" yPosition="788.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="setSalario" returnType="void" visibility="public">
+          <Argument type="double" name="salario"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Funcionario" package="projcompanhiaaerea" visibility="public" xPosition="1174.0" yPosition="553.0">
+      <Fields>
+        <Field name="cargo" type="String" visibility="private"/>
+        <Field name="codFuncionario" type="int" visibility="private"/>
+        <Field name="salario" type="double" visibility="private"/>
+        <Field name="qtdFuncionarios" type="int" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+      </Constructors>
+      <Methods>
+        <Method name="getQtdFuncionarios" returnType="int" visibility="public" isStatic="true"/>
+        <Method name="getCodFuncionario" returnType="int" visibility="public"/>
+        <Method name="setCodFuncionario" returnType="void" visibility="public">
+          <Argument type="int" name="codFuncionario"/>
+        </Method>
+        <Method name="getCargo" returnType="String" visibility="public"/>
+        <Method name="setCargo" returnType="void" visibility="public">
+          <Argument type="String" name="cargo"/>
+        </Method>
+        <Method name="getDataAdmissao" returnType="String" visibility="public"/>
+        <Method name="setDataAdmissao" returnType="void" visibility="public">
+          <Argument type="String" name="dataAdmissao"/>
+        </Method>
+        <Method name="getSalario" returnType="double" visibility="public"/>
+        <Method name="setSalario" returnType="void" visibility="public">
+          <Argument type="double" name="salario"/>
+        </Method>
+        <Method name="mostraFuncionario" returnType="void" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="Passageiro" package="projcompanhiaaerea" visibility="public" xPosition="1105.0" yPosition="1.0">
+      <Fields>
+        <Field name="codPassageiro" type="int" visibility="private"/>
+        <Field name="pesoBagagem" type="double" visibility="private"/>
+        <Field name="qtdPassageiros" type="int" visibility="private" isStatic="true"/>
+        <Field name="elegivel" type="boolean" visibility="private"/>
+        <Field name="voo" type="Voo" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="double" name="pesoBagagem"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="isElegivel" returnType="boolean" visibility="public"/>
+        <Method name="setElegivel" returnType="void" visibility="public">
+          <Argument type="boolean" name="elegivel"/>
+        </Method>
+        <Method name="getQtdPassageiros" returnType="int" visibility="public" isStatic="true"/>
+        <Method name="getCodPassageiro" returnType="int" visibility="public"/>
+        <Method name="setCodPassageiro" returnType="void" visibility="public">
+          <Argument type="int" name="codPassageiro"/>
+        </Method>
+        <Method name="getPesoBagagem" returnType="double" visibility="public"/>
+        <Method name="setPesoBagagem" returnType="void" visibility="public">
+          <Argument type="double" name="pesoBagagem"/>
+        </Method>
+        <Method name="mostraPassageiro" returnType="void" visibility="package"/>
+        <Method name="addVoo" returnType="void" visibility="package">
+          <Argument type="Voo" name="voo"/>
+        </Method>
+        <Method name="taxaPeso" returnType="void" visibility="public">
+          <Argument type="Passageiro" name="p"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Pessoa" package="projcompanhiaaerea" visibility="public" xPosition="1491.0" yPosition="183.0">
+      <Fields>
+        <Field name="cpf" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getCpf" returnType="int" visibility="public"/>
+        <Method name="setCpf" returnType="void" visibility="public">
+          <Argument type="int" name="cpf"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="setEmail" returnType="void" visibility="public">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="getTelefone" returnType="String" visibility="public"/>
+        <Method name="setTelefone" returnType="void" visibility="public">
+          <Argument type="String" name="telefone"/>
+        </Method>
+        <Method name="getDataNascimento" returnType="String" visibility="public"/>
+        <Method name="setDataNascimento" returnType="void" visibility="public">
+          <Argument type="String" name="dataNascimento"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Piloto" package="projcompanhiaaerea" visibility="public" xPosition="871.0" yPosition="632.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="setSalario" returnType="void" visibility="public">
+          <Argument type="double" name="salario"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProjCompanhiaAerea" package="projcompanhiaaerea" visibility="public" xPosition="39.0" yPosition="565.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Voo" package="projcompanhiaaerea" visibility="public" xPosition="547.0" yPosition="38.0">
+      <Fields>
+        <Field name="codVoo" type="int" visibility="private" isFinal="true"/>
+        <Field name="qtdVoos" type="int" visibility="private" isStatic="true"/>
+        <Field name="origem" type="String" visibility="private"/>
+        <Field name="aviao" type="Aeronave" visibility="package"/>
+        <Field name="aeroporto" type="Aeroporto" visibility="package"/>
+        <Field name="listaPassageiros" type="List&lt;Passageiro&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="Passageiro" name="passageiro"/>
+          <Argument type="Aeronave" name="aeronave"/>
+          <Argument type="Aeroporto" name="aeroporto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getOrigem" returnType="String" visibility="public"/>
+        <Method name="getCodVoo" returnType="int" visibility="public"/>
+        <Method name="setOrigem" returnType="void" visibility="public">
+          <Argument type="String" name="origem"/>
+        </Method>
+        <Method name="getDestino" returnType="String" visibility="public"/>
+        <Method name="setDestino" returnType="void" visibility="public">
+          <Argument type="String" name="destino"/>
+        </Method>
+        <Method name="getDataHoraSaida" returnType="String" visibility="public"/>
+        <Method name="setDataHoraSaida" returnType="void" visibility="public">
+          <Argument type="String" name="dataHoraSaida"/>
+        </Method>
+        <Method name="mostraVoo" returnType="void" visibility="package"/>
+        <Method name="addPassageiro" returnType="void" visibility="package">
+          <Argument type="Passageiro" name="passageiro"/>
+          <Argument type="Voo" name="voo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="ExcessoCarga" package="projcompanhiaaerea" visibility="public" xPosition="1429.0" yPosition="1.0">
+      <Methods/>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="projcompanhiaaerea.Passageiro" target="projcompanhiaaerea.Pessoa"/>
+    <IsRelation name="is" source="projcompanhiaaerea.Funcionario" target="projcompanhiaaerea.Pessoa"/>
+    <UseRelation source="projcompanhiaaerea.Passageiro" target="projcompanhiaaerea.Voo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="projcompanhiaaerea.Voo" target="projcompanhiaaerea.Voo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="projcompanhiaaerea.Passageiro" target="projcompanhiaaerea.ExcessoCarga"/>
+    <HasRelation name="voo" source="projcompanhiaaerea.Passageiro" target="projcompanhiaaerea.Voo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="projcompanhiaaerea.Piloto" target="projcompanhiaaerea.Funcionario"/>
+    <HasRelation name="aviao" source="projcompanhiaaerea.Voo" target="projcompanhiaaerea.Aeronave" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="aeroporto" source="projcompanhiaaerea.Voo" target="projcompanhiaaerea.Aeroporto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="projcompanhiaaerea.CoPiloto" target="projcompanhiaaerea.Funcionario"/>
+    <HasRelation name="listaPassageiros" source="projcompanhiaaerea.Voo" target="projcompanhiaaerea.Passageiro" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Passageiro&gt;"/>
+    <UseRelation source="projcompanhiaaerea.Passageiro" target="projcompanhiaaerea.Passageiro" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
